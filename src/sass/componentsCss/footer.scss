@@ -1,0 +1,88 @@
+.footer {
+  background-color: white;
+  padding: 15px 0;
+  box-shadow: 0 3px 10px 0 rgb(0 0 0 / 3%);
+
+  &-container {
+    max-width: 2000px;
+    width: 100%;
+    margin: 0 auto;
+
+    .footer-row {
+      @include flexbox;
+
+      .footer-left {
+        @include flexbox;
+
+        .footer-logo {
+          width: 300px;
+          padding-right: 50px;
+
+          span {
+            color: $color-black;
+            font-size: 15px;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .footer-inner-row {
+          @include flexbox;
+
+          .footer-inner-links {
+            padding: 10px 35px;
+
+            .footer-inner-link {
+              @include fontTextStyle;
+              text-transform: uppercase;
+              transition: all 0.2s;
+            }
+
+            .footer-inner-link:hover {
+              color: $button-color;
+            }
+          }
+        }
+      }
+
+      .footer-right {
+        @include flexbox;
+        column-gap: 20px;
+
+        .footer-mobile-links {
+          @include flexbox;
+          flex-direction: column;
+          row-gap: 5px;
+
+          .footer-mobile-link {
+            @include fontTextStyle;
+            font-size: 20px;
+          }
+        }
+
+        .footer-callback-row {
+          @include flexbox;
+          flex-direction: column;
+          row-gap: 5px;
+
+          .request-call {
+            @include btnStyle;
+            padding: 11px 20px;
+          }
+
+          .request-call:hover {
+            @include btnStyleHover;
+          }
+
+          .whatsapp-request {
+            @include fontTextStyle;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

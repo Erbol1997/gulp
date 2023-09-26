@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-text;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.request-call {
+  @include btnStyle;
+  padding: 11px 20px;
+}
+
+.request-call:hover {
+  @include btnStyleHover;
+}

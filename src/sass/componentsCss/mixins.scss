@@ -1,0 +1,30 @@
+@mixin flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin fontTextStyle {
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-black;
+}
+
+@mixin btnStyle {
+  background-color: $button-color;
+  color: $color-white !important;
+  @include fontTextStyle;
+  border-radius: 60px;
+  padding: 11px 70px 12px;
+  border: none;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+@mixin btnStyleHover {
+  text-decoration: none;
+  border: none;
+  background-color: $button-color-hover;
+  color: $color-white;
+}

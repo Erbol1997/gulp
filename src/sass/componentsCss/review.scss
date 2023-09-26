@@ -1,0 +1,71 @@
+.review {
+  &-container {
+    padding-left: 15px;
+
+    &-row {
+      @include flexbox;
+      position: relative;
+
+      .row-left {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .row-right {
+        div {
+          position: relative;
+        }
+        background-image: url('../img/Whiteboard-Lead.png');
+        width: 50%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          display: none;
+        }
+      }
+
+      .row-left {
+        width: 60%;
+        padding-top: 100px;
+        padding-bottom: 65px;
+
+        .row-left-inner {
+          display: flex;
+          flex-direction: column;
+          row-gap: 30px;
+          width: 50%;
+
+          .left-block-subtitle {
+            font-size: 15px;
+            font-weight: 700;
+            color: $color-green;
+            font-family: $font-family-title;
+            text-transform: uppercase;
+          }
+
+          .left-block-title {
+            font-size: 40px;
+            font-family: $font-family-title;
+            font-weight: 700;
+            color: $color-gray;
+          }
+
+          .left-block-text {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #686f8a;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
